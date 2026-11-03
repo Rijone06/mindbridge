@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Search verified therapists in Bangladesh by specialty, approach, format, and budget.">
+  <title>Find a Therapist — MindBridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="therapist-search.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="MindBridge home"><span class="brand-mark">✦</span><span>Mind<span class="brand-accent">Bridge</span></span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links"><a href="index.html#resources">Resources</a><a href="crisis-support.html">Crisis Support</a></div>
+      <div class="nav-actions"><a class="login" href="#footer">Log In</a><a class="button button-small" href="therapist-match.html">Find a Therapist</a></div>
+    </nav>
+  </header>
+
+  <main class="search-page">
+    <section class="search-top"><div class="wrap"><h1>Therapists matched for you</h1><div class="search-row"><label class="search-box"><span aria-hidden="true">⌕</span><input id="therapist-search" type="search" placeholder="Search by name, specialty, or concern..." aria-label="Search by name, specialty, or concern"></label><div class="view-switch" role="group" aria-label="Choose results view"><button class="selected" data-view="list">List</button><button data-view="map">Map</button></div></div></div></section>
+    <section class="results-area" id="results"><div class="wrap results-layout">
+      <aside class="filters" id="filters"><div class="filter-heading"><h2>Filters</h2><button class="filter-close" aria-label="Close filters">×</button></div>
+        <label class="filter-control">SPECIALTY<select id="specialty"><option value="">All</option><option>Anxiety</option><option>Depression</option><option>Trauma</option><option>Stress</option><option>Relationships</option><option>Grief</option><option>Personal growth</option><option>Cultural identity</option><option>Men's issues</option><option>LGBTQ+</option><option>Couples</option></select></label>
+        <label class="filter-control">APPROACH<select id="approach"><option value="">All</option><option>CBT</option><option>Trauma-Informed</option><option>Psychodynamic</option><option>DBT</option><option>Humanistic</option><option>Mindfulness</option><option>Emotionally Focused</option></select></label>
+        <label class="filter-control">PAYMENT<select id="payment"><option value="">All</option><option>Self-pay</option><option>Corporate</option><option>NGO referral</option><option>University referral</option></select></label>
+        <label class="price-control" for="max-price"><span>MAX PRICE: <b id="price-label">৳5,000+</b></span><input id="max-price" type="range" min="1500" max="5000" step="100" value="5000"></label>
+        <fieldset class="format-control"><legend>FORMAT</legend><label><input type="radio" name="format" value="" checked> All</label><label><input type="radio" name="format" value="online"> Online</label><label><input type="radio" name="format" value="in-person"> In-person</label></fieldset>
+        <button class="clear-filters" id="clear-filters">Clear filters</button>
+      </aside>
+      <div class="results-content"><div class="results-toolbar"><p><strong id="result-count">6</strong> therapists found</p><div class="toolbar-actions"><button class="mobile-filter-button" id="open-filters">☷ Filters</button><label class="sort-label"><span class="sr-only">Sort therapists</span><select id="sort-order"><option value="match">Best match</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Highest rated</option></select></label></div></div><p class="match-summary" id="match-summary" hidden></p>
+        <div class="therapist-results" id="therapist-results" aria-live="polite"></div>
+        <div class="map-view" id="map-view" hidden><div class="map-art" aria-label="Map showing therapist locations in Bangladesh"><span class="map-water">BANGLADESH</span><span class="map-river"></span><button class="map-pin pin-one" data-card="0" aria-label="Dr. Nusrat Jahan, Dhaka">৳</button><button class="map-pin pin-two" data-card="1" aria-label="Sharmeen Sultana, Rajshahi">৳</button><button class="map-pin pin-three" data-card="2" aria-label="Sajid Rahman, Dhaka">৳</button><button class="map-pin pin-four" data-card="3" aria-label="Dr. Farzana Karim, Dhaka">৳</button><button class="map-pin pin-five" data-card="4" aria-label="Tanvir Ahmed, Chattogram">৳</button><button class="map-pin pin-six" data-card="5" aria-label="Mahmudul Hasan, Sylhet">৳</button><div class="map-note">Select a price marker to view a therapist</div></div><div id="map-selected" class="map-selected" aria-live="polite">Choose a marker on the map to see therapist details.</div></div>
+        <div class="no-results" id="no-results" hidden><span>⌕</span><h2>No therapists match these filters</h2><p>Try changing your search or clearing one or more filters.</p><button class="button" id="reset-from-empty">Clear filters</button></div>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="footer" id="footer"><div class="wrap"><div class="footer-grid"><div class="footer-about"><a class="brand footer-brand" href="index.html"><span class="brand-mark">✦</span><span>Mind<span class="brand-accent">Bridge</span></span></a><p>Connecting people with the right licensed mental health professionals.</p></div><div><h3>Find Care</h3><a href="therapist-search.html">Find a Therapist</a><a href="index.html#resources">How It Works</a><a href="therapist-search.html">Specialties</a><a href="index.html#resources">Fees &amp; Payment</a></div><div><h3>For Therapists</h3><a href="#footer">Join MindBridge</a><a href="#footer">Provider Portal</a><a href="#footer">Verification</a><a href="index.html#resources">Resources</a></div><div><h3>Company</h3><a href="#footer">About Us</a><a href="#footer">Careers</a><a href="#footer">Press</a><a href="#footer">Contact</a></div><div><h3>Legal &amp; Safety</h3><a href="#footer">Privacy Policy</a><a href="#footer">Terms of Service</a><a href="#footer">Accessibility</a><a href="crisis-support.html">Crisis Resources</a></div></div><div class="footer-bottom"><span>© 2026 MindBridge Health, Inc. All rights reserved.</span><span>MindBridge is not an emergency service. If you are in immediate danger in Bangladesh, call the <b>National Emergency Service at 999.</b></span></div></div></footer>
+  <div class="filter-scrim" id="filter-scrim"></div>
+  <script src="therapist-search.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="View verified therapist credentials, specialties, session details, and availability on MindBridge.">
+  <title>Therapist Profile — MindBridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="therapist-profile.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav wrap" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="MindBridge home"><span class="brand-mark">✦</span><span>Mind<span class="brand-accent">Bridge</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links"><a href="index.html#resources">Resources</a><a href="crisis-support.html">Crisis Support</a></div>
+    <div class="nav-actions"><a class="login" href="#footer">Log In</a><a class="button button-small" href="therapist-match.html">Find a Therapist</a></div>
+  </nav></header>
+
+  <main class="profile-page wrap">
+    <a class="back-link" href="therapist-search.html">← Back to results</a>
+    <div class="profile-layout">
+      <div class="profile-main-column">
+        <section class="profile-summary" aria-labelledby="profile-name">
+          <div class="profile-photo-area"><img id="profile-photo" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=360&amp;q=85" alt="Dr. Nusrat Jahan"><span class="profile-verified">✓ Verified</span></div>
+          <div class="profile-summary-content"><div class="profile-title-row"><div><h1 id="profile-name">Dr. Nusrat Jahan</h1><p id="profile-credential">MPhil, Clinical Psychologist · Qualifications verified</p><p class="profile-rating"><span aria-label="5 out of 5 stars">★★★★★</span> <b id="profile-rating">4.9</b> <small>(<span id="profile-reviews">128</span> reviews)</small></p></div><div class="status-pills"><span class="online-pill">Online</span><span class="available-pill">Available this week</span></div></div>
+            <div class="stats-grid"><div><span>Session fee</span><b id="profile-price">৳2,500</b></div><div><span>Duration</span><b>50 min</b></div><div><span>Experience</span><b id="profile-experience">12 years</b></div><div><span>Languages</span><b id="profile-languages">BN, EN</b></div></div>
+          </div>
+        </section>
+
+        <section class="match-card"><div class="match-heading"><span id="match-score">94%</span><h2>Why you may be a good match</h2></div><ul><li>Specializes in <span id="match-specialties">anxiety and stress</span></li><li>Accepts bKash, Nagad and cards</li><li>Available evenings and weekends</li><li>Offers secure teletherapy</li><li>Speaks Bangla and English</li><li>CBT approach you selected</li></ul></section>
+
+        <section class="profile-details-card"><div class="profile-tabs" role="tablist" aria-label="Therapist details"><button class="profile-tab active" role="tab" aria-selected="true" aria-controls="tab-panel" data-tab="about">About</button><button class="profile-tab" role="tab" aria-selected="false" aria-controls="tab-panel" data-tab="specialties">Specialties</button><button class="profile-tab" role="tab" aria-selected="false" aria-controls="tab-panel" data-tab="reviews">Reviews</button></div><div class="tab-panel" id="tab-panel" role="tabpanel" tabindex="0"></div></section>
+      </div>
+
+      <aside class="booking-card" aria-labelledby="booking-title"><h2 id="booking-title">Book a session</h2><div class="day-options" role="group" aria-label="Choose a day"><button class="day-option selected" data-day="Today">Today</button><button class="day-option" data-day="Tomorrow">Tomorrow</button><button class="day-option" data-day="Wednesday">Wednesday</button><button class="day-option" data-day="Thursday">Thursday</button></div><div class="time-options" role="group" aria-label="Choose an available time"><button class="time-option" data-time="10:00 AM">10:00 AM</button><button class="time-option" data-time="11:30 AM">11:30 AM</button><button class="time-option" data-time="3:00 PM">3:00 PM</button></div><button class="button book-appointment" id="book-appointment">Book Appointment</button><button class="button message-button" id="open-message">Send Message</button><p class="booking-note">Free 15-min consultation available. Cancellation up to 24h before session.</p><p class="booking-feedback" id="booking-feedback" aria-live="polite"></p></aside>
+    </div>
+  </main>
+
+  <footer class="footer" id="footer"><div class="wrap"><div class="footer-grid"><div class="footer-about"><a class="brand footer-brand" href="index.html"><span class="brand-mark">✦</span><span>Mind<span class="brand-accent">Bridge</span></span></a><p>Connecting people with the right licensed mental health professionals.</p></div><div><h3>Find Care</h3><a href="therapist-search.html">Find a Therapist</a><a href="index.html#resources">How It Works</a><a href="therapist-search.html">Specialties</a><a href="index.html#resources">Fees &amp; Payment</a></div><div><h3>For Therapists</h3><a href="#footer">Join MindBridge</a><a href="#footer">Provider Portal</a><a href="#footer">Verification</a><a href="index.html#resources">Resources</a></div><div><h3>Company</h3><a href="#footer">About Us</a><a href="#footer">Careers</a><a href="#footer">Press</a><a href="#footer">Contact</a></div><div><h3>Legal &amp; Safety</h3><a href="#footer">Privacy Policy</a><a href="#footer">Terms of Service</a><a href="#footer">Accessibility</a><a href="crisis-support.html">Crisis Resources</a></div></div><div class="footer-bottom"><span>© 2026 MindBridge Health, Inc. All rights reserved.</span><span>MindBridge is not an emergency service. If you are in immediate danger in Bangladesh, call the <b>National Emergency Service at 999.</b></span></div></div></footer>
+
+  <dialog class="message-dialog" id="message-dialog"><form method="dialog" class="message-form"><button class="dialog-close" aria-label="Close">×</button><span class="overline">SEND A PRIVATE MESSAGE</span><h2>Message <span id="message-name">Dr. Nusrat Jahan</span></h2><p>Introduce yourself and share what you'd like support with. You can keep it brief.</p><label>Your message<textarea required rows="5" placeholder="Hi, I’d like to ask about... "></textarea></label><div class="dialog-actions"><button class="button button-outline" value="cancel">Cancel</button><button class="button" id="send-message" value="send">Send Message</button></div></form></dialog>
+  <script src="therapist-profile.js"></script>
+</body>
+</html>

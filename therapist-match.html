@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#effafc">
+  <meta name="description" content="Tell MindBridge what you are looking for and find therapists who fit your needs, preferences, and budget.">
+  <title>Find your therapist match — MindBridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="therapist-match.css">
+</head>
+<body class="match-page">
+  <main class="match-stage">
+    <a class="match-brand" href="index.html" aria-label="MindBridge home"><span class="brand-mark">✦</span><span>Mind<span class="brand-accent">Bridge</span></span></a>
+    <section class="match-card" aria-labelledby="match-title">
+      <div class="match-progress"><div class="progress-label"><span id="step-label">Step 1 of 6</span><span id="progress-percent">17% complete</span></div><div class="progress-track" role="progressbar" aria-label="Matching questionnaire progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="17"><span id="progress-bar"></span></div></div>
+      <div id="question-panel" aria-live="polite"></div>
+      <div class="match-footer"><button class="button button-outline" id="back-button" type="button">← Back</button><button class="button" id="continue-button" type="button">Continue →</button></div>
+    </section>
+    <p class="privacy-note">Your answers are private. You can change your preferences anytime.</p>
+  </main>
+  <script src="therapist-match.js"></script>
+</body>
+</html>

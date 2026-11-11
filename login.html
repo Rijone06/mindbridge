@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Log in to your MindBridge account to manage your mental healthcare.">
+  <title>Log In — MindBridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav wrap" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="MindBridge home"><span class="brand-mark">✦</span><span>Mind<span class="brand-accent">Bridge</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links"><a href="index.html#resources">Resources</a><a href="crisis-support.html">Crisis Support</a></div>
+    <div class="nav-actions"><a class="login current-login" href="login.html" aria-current="page">Log In</a><a class="button button-small" href="therapist-match.html">Find a Therapist</a></div>
+  </nav></header>
+
+  <main class="login-shell">
+    <section class="login-aside" aria-label="About MindBridge">
+      <a class="aside-brand" href="index.html"><span class="aside-brand-mark">✦</span><span>MindBridge</span></a>
+      <div class="aside-message"><h1>Care starts with finding the right therapist.</h1><p>MindBridge makes it simple to find, book, and meet with a licensed mental health professional.</p></div>
+      <ul class="aside-benefits"><li><span>🔒</span>Private, encrypted care communication</li><li><span>✓</span>Qualifications and registrations checked</li><li><span>▦</span>Flexible scheduling that fits your life</li></ul>
+    </section>
+
+    <section class="login-panel" aria-labelledby="login-title"><div class="login-form-wrap">
+      <div class="login-heading"><h2 id="login-title">Welcome back</h2><p>Choose your account type, then enter your details.</p></div>
+      <form id="login-form" novalidate>
+        <fieldset class="account-type"><legend>I am logging in as</legend><div class="account-options"><button class="account-option selected" type="button" data-account="Patient" aria-pressed="true"><strong>Patient</strong><span>Find and manage care</span></button><button class="account-option" type="button" data-account="Therapist" aria-pressed="false"><strong>Therapist</strong><span>Manage your practice</span></button></div></fieldset>
+        <label class="form-label" for="email">Email address</label><input class="form-input" id="email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+        <div class="password-label-row"><label class="form-label" for="password">Password</label><button class="text-action" id="forgot-password" type="button">Forgot password?</button></div>
+        <div class="password-field"><input class="form-input" id="password" type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required><button class="show-password" id="toggle-password" type="button" aria-label="Show password" aria-pressed="false">Show</button></div>
+        <label class="remember-option"><input type="checkbox" name="remember"> <span>Remember me</span></label>
+        <button class="button login-submit" id="login-submit" type="submit">Log In as Patient</button>
+        <p class="form-notice" id="form-notice" aria-live="polite"></p>
+      </form>
+      <p class="signup-prompt">Don't have an account? <a class="text-action" href="signup.html">Create one</a></p>
+  </main>
+  <script src="login.js"></script>
+</body>
+</html>

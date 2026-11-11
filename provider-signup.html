@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Join MindBridge as a therapist and connect with clients seeking mental health support.">
+  <title>Join as a Therapist — MindBridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav wrap" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="MindBridge home"><span class="brand-mark">✦</span><span>Mind<span class="brand-accent">Bridge</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links"><a href="index.html#resources">Resources</a><a href="crisis-support.html">Crisis Support</a></div>
+    <div class="nav-actions"><a class="login" href="login.html">Log In</a><a class="button button-small" href="therapist-match.html">Find a Therapist</a></div>
+  </nav></header>
+  <main class="login-shell signup-shell provider-shell">
+    <section class="login-aside" aria-label="About MindBridge"><a class="aside-brand" href="index.html"><span class="aside-brand-mark">✦</span><span>MindBridge</span></a><div class="aside-message"><h1>Join our network of trusted therapists.</h1><p>Connect with clients who need your expertise. Manage your practice on your terms.</p></div><ul class="aside-benefits"><li><span>🔒</span>Private, encrypted care communication</li><li><span>✓</span>Qualifications and registrations checked</li><li><span>▦</span>Flexible scheduling that fits your life</li></ul></section>
+    <section class="login-panel signup-panel" aria-labelledby="signup-title"><div class="login-form-wrap signup-form-wrap provider-form-wrap">
+      <div class="login-heading"><h2 id="signup-title">Join as a therapist</h2><p>Start reaching clients who need your expertise.</p></div>
+      <form class="signup-form" id="signup-form" novalidate>
+        <label class="form-label" for="full-name">Full name</label><input class="form-input" id="full-name" name="name" autocomplete="name" placeholder="Your professional name" required>
+        <label class="form-label field-gap" for="license-type">License type</label><select class="form-input select-input" id="license-type" name="license" required><option value="">Select license type...</option><option>Psychiatrist (BMDC)</option><option>Clinical Psychologist</option><option>Counselling Psychologist</option><option>Educational Psychologist</option><option>Licensed Counsellor</option><option>Other qualified mental health professional</option></select>
+        <label class="form-label field-gap" for="professional-id">Registration or professional ID</label><input class="form-input" id="professional-id" name="professional-id" placeholder="e.g. BMDC A-12345" required>
+        <label class="form-label field-gap" for="email">Email address</label><input class="form-input" id="email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+        <label class="form-label field-gap" for="password">Password</label><div class="password-field"><input class="form-input" id="password" type="password" name="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required><button class="show-password" id="toggle-password" type="button" aria-label="Show password" aria-pressed="false">Show</button></div>
+        <label class="terms-option"><input type="checkbox" name="terms" required><span>I agree to MindBridge's <span class="inline-link">Terms of Service</span> and <span class="inline-link">Privacy Policy</span>. I understand that MindBridge is not an emergency service.</span></label>
+        <button class="button login-submit" type="submit">Create Provider Account</button><p class="form-notice" id="form-notice" aria-live="polite"></p>
+      </form>
+      <p class="signup-prompt">Already have an account? <a class="text-action" href="login.html">Log in</a></p>
+      <p class="signup-prompt provider-prompt">Looking for care? <a class="text-action" href="signup.html">Create a patient account</a></p>
+    </div></section>
+  </main>
+  <script src="signup.js"></script>
+</body>
+</html>
